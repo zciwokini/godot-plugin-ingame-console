@@ -1,0 +1,76 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Object",
+"class": "Arg",
+"language": "GDScript",
+"path": "res://addons/ingame_console/scripts/args/arg.gd"
+}, {
+"base": "Object",
+"class": "Command",
+"language": "GDScript",
+"path": "res://addons/ingame_console/scripts/command.gd"
+}, {
+"base": "IValidator",
+"class": "FunctionValidator",
+"language": "GDScript",
+"path": "res://addons/ingame_console/scripts/validators/function_validator.gd"
+}, {
+"base": "Object",
+"class": "IValidator",
+"language": "GDScript",
+"path": "res://addons/ingame_console/scripts/validators/validator.gd"
+}, {
+"base": "IValidator",
+"class": "RegexValidator",
+"language": "GDScript",
+"path": "res://addons/ingame_console/scripts/validators/regex_validator.gd"
+}, {
+"base": "IValidator",
+"class": "StringValidator",
+"language": "GDScript",
+"path": "res://addons/ingame_console/scripts/validators/string_validator.gd"
+}, {
+"base": "IValidator",
+"class": "StringsValidator",
+"language": "GDScript",
+"path": "res://addons/ingame_console/scripts/validators/strings_validator.gd"
+} ]
+_global_script_class_icons={
+"Arg": "",
+"Command": "",
+"FunctionValidator": "",
+"IValidator": "",
+"RegexValidator": "",
+"StringValidator": "",
+"StringsValidator": ""
+}
+
+[application]
+
+config/name="IngameConsole"
+run/main_scene="res://world.tscn"
+
+[autoload]
+
+Console="*res://addons/ingame_console/scripts/console_global.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/ingame_console/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
