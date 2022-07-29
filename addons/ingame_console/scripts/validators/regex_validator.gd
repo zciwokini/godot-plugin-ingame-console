@@ -9,4 +9,5 @@ func _init(v, m).(v, m) -> void:
 func validate(value) -> bool:
 	var regex := RegEx.new()
 	regex.compile(self.validation)
+	
 	return regex.search(value) != null

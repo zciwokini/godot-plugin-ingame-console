@@ -1,11 +1,10 @@
-class_name Command
 extends Object
+class_name Command
 
 
 ##############
 # Properties #
 ##############
-
 
 var id: String
 var function: FuncRef
@@ -13,6 +12,10 @@ var arguments: Array
 var short_description: String
 var long_description: String
 
+
+############################
+# Default method overrides #
+############################
 
 func _init(id: String, function: FuncRef, arguments: Array = [], short_description: String = "", long_description: String = "") -> void:
 	self.id = id
@@ -22,6 +25,10 @@ func _init(id: String, function: FuncRef, arguments: Array = [], short_descripti
 	self.long_description = long_description
 
 
+###############
+# Own methods #
+###############
+
 func run(command_string: String) -> Dictionary:
 	var parsed_args := parse_string_args(command_string)
 	var messages = validate(parsed_args)
@@ -30,6 +37,7 @@ func run(command_string: String) -> Dictionary:
 		return messages
 	
 	function.call_funcv([parsed_args])
+	
 	return {}
 
 
@@ -83,6 +91,7 @@ func parse_string_args(text: String) -> Dictionary:
 		i += 1
 	
 	return args
+
 
 func validate(passed_args: Dictionary) -> Dictionary:
 	var messages = {}

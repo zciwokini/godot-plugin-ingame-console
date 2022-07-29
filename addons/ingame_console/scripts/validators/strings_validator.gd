@@ -9,8 +9,6 @@ func _init(v, m).(v, m) -> void:
 func validate(value) -> bool:
 	for v in self.validation:
 		if value.match(v):
-			print(v)
 			return true
 	
-	print(value)
 	return false

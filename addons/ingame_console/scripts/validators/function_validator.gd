@@ -1,6 +1,7 @@
 extends IValidator
 class_name FunctionValidator
 
+
 func _init(v, m).(v, m) -> void:
 	pass
 
