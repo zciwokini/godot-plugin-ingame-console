@@ -1,4 +1,4 @@
-Documentation for In-game Console
+Documentations for In-game Console
 -------------
 
 - [Get Started][GetStarted]

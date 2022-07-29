@@ -1,6 +1,8 @@
 Get Started - Documentation
 ---------------------------
 
+[Documentations][Documentations]
+
 Try out the demo
 ----------------
 If you want to check how it works/looks like, download this project and start the `demo.tscn` scene.
@@ -66,8 +68,13 @@ Lastly, to quit from the application, type in the following:
 ```
 quit
 ```
+---
+
+[Documentations][Documentations]
 
 
+
+[Documentations]: /docs/documentations.md "Documentations - In-game Console Documentation"
 
 [Singleton]: https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html "Singleton (AutoLoad) - Godot Engine Documentation"
 [RichTextLabel]: https://docs.godotengine.org/en/stable/classes/class_richtextlabel.html "RichTextLabel - Godot Engine Documentation"
